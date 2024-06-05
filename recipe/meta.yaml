@@ -1,6 +1,6 @@
 {% set name = "EigenExa" %}
 {% set version = "2.11" %}
-{% set build = 0 %}
+{% set build = 1 %}
 {% set mpi = mpi or "mpich" %}
 
 package:
@@ -36,6 +36,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('fortran') }}
     - automake
     - autoconf
